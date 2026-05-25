@@ -383,8 +383,10 @@ Manual	5–6
 Todos coinciden aproximadamente en:
 
 6 clases
-¿Cuál es el más usado?
+
+## ¿Cuál es el más usado?
 Método	Uso
+
 Sturges	Estadística básica y Excel
 Raíz cuadrada	Método rápido
 Rice	Datos medianos
