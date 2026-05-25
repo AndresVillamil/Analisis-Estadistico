@@ -188,6 +188,8 @@ Por eso en la tabla aparecen 6 intervalos de clase.
 Cómo hacerlo en Excel
 
 La fórmula en Excel sería: 
- 
+
+'''
 </> excel
 =1+3,322*LOG10(A1)
+'''
