@@ -185,3 +185,210 @@ La fórmula en Excel sería:
 </> excel
 =1+3,322*LOG10(A1)
 '''
+Resultado:
+
+5,907
+
+Luego se redondea:
+
+=REDONDEAR.MAS(1+3,322*LOG10(30);0)
+
+Resultado final:
+
+6
+Después de obtener el número de clases
+
+Se calcula el tamaño de clase:
+
+Amplitud=
+N
+u
+ˊ
+mero de clases
+Rango
+	​
+
+
+En tu ejercicio:
+
+A=
+6
+76−35
+	​
+
+
+A=
+6
+41
+	​
+
+A≈6.83
+
+Se aproxima a:
+
+7
+
+Por eso los intervalos avanzan aproximadamente de 7 en 7:
+
+35–42
+42–49
+49–56
+etc.
+que otra forma se puede calcular?
+
+Además de la Regla de Sturges, existen otros métodos para calcular el número de clases en una distribución de frecuencias. Los más utilizados son:
+
+1. Regla de la raíz cuadrada
+
+Es uno de los métodos más simples.
+
+La fórmula es:
+
+k=
+n
+	​
+
+
+Donde:
+
+k = número de clases
+n = número de datos
+
+En tu ejercicio:
+
+k=
+30
+	​
+
+k≈5.47
+
+Se aproxima a:
+
+k≈6
+En Excel
+=RAIZ(30)
+
+o:
+
+=SQRT(30)
+2. Regla de Rice
+
+Esta regla suele generar más clases que Sturges.
+
+La fórmula es:
+
+k=2
+3
+n
+	​
+
+
+Aplicando:
+
+k=2
+3
+30
+	​
+
+k≈2(3.11)
+k≈6.22
+
+Resultado aproximado:
+
+k≈6
+En Excel
+=2*(30^(1/3))
+3. Regla de Scott
+
+Esta es más estadística y se basa en la desviación estándar.
+
+Primero calcula el ancho de clase:
+
+h=
+3
+n
+	​
+
+3.5σ
+	​
+
+
+Luego:
+
+k=
+h
+Rango
+	​
+
+
+Donde:
+
+σ = desviación estándar
+h = amplitud óptima
+k = número de clases
+
+Este método se usa mucho en histogramas avanzados.
+
+4. Regla de Freedman–Diaconis
+
+Más robusta cuando existen valores extremos.
+
+La fórmula del ancho es:
+
+h=
+3
+n
+	​
+
+2(IQR)
+	​
+
+
+Donde:
+
+IQR = rango intercuartílico
+
+Luego:
+
+k=
+h
+Rango
+	​
+
+
+Es muy usada en análisis de datos y ciencia de datos.
+
+5. Método manual o empírico
+
+En muchos ejercicios académicos se usan reglas prácticas:
+
+Cantidad de datos	Número sugerido de clases
+20 – 50	5 a 7
+50 – 100	7 a 10
+Más de 100	10 o más
+
+Con 30 datos normalmente se usan:
+
+5 o 6 clases
+Comparación para tu ejercicio
+
+Con n=30:
+
+Método	Resultado
+Sturges	6
+Raíz cuadrada	6
+Rice	6
+Manual	5–6
+
+Todos coinciden aproximadamente en:
+
+6 clases
+¿Cuál es el más usado?
+Método	Uso
+Sturges	Estadística básica y Excel
+Raíz cuadrada	Método rápido
+Rice	Datos medianos
+Scott	Estadística avanzada
+Freedman-Diaconis	Ciencia de datos y outliers
+
+En ejercicios académicos como el tuyo, normalmente se utiliza Sturges.
